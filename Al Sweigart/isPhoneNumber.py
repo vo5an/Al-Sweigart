@@ -16,7 +16,10 @@ def isPhoneNumber(text):
             return False
     return True
 
-print('415-555-4242 = это телефонный номер:')
-print(isPhoneNumber('415-555-4242'))
-print('Moshi moshi - это телефонный номер:')
-print(isPhoneNumber('Mosji moshi'))
+message = 'Позвони мне завтра по номеру 415-555-1011, ' \
+          '415-555-9999 - это телефонный номер моего офиса.'
+for i in range(len(message)):
+    chuck = message[i:i+12]
+    if isPhoneNumber(chuck):
+        print('Найденный телефонный номер: ' + chuck)
+print('Готово')
